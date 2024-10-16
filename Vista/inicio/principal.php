@@ -18,6 +18,15 @@
             </div>
           </div>
         </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small info coloured-icon">
+            <div class="info">
+              <h3 class="card-title">Cantidad Productos</h3>
+              <p><?php $p=$this->modelo->Cantidad()?></p>
+                <?=$p->Cantidad?>
+            </div>
+          </div>
+        </div>
 
 
     </main>
