@@ -3,85 +3,76 @@
 class Producto{
 
     private $pdo;
-
-    private $pro_id;
-    private $pro_name;
-    private $pro_mar;
-    private $pro_cos;
-    private $pro_pre;
-    private $pro_can;
-    private $pro_img;
+   
+    private $id_producto;
+    private $nombre_producto;
+    private $descripcion_producto;
+    private $costo_produccion;
+    private $cantidad_disponible;
+    private $fecha_creacion;
+    
 
     public function __CONSTRUCT(){
         $this->pdo = BasedeDatos::Conectar();
     }
 
     //Producto ID
-    public function getPro_id() : ?int{
-        return $this->pro_id;
+    public function getid_producto() : ?int{
+        return $this->id_producto;
     }
 
-    public function setPro_id(int $id){
-        $this-> pro_id = $id;
+    public function setid_producto(int $id){
+        $this-> id_producto = $id;
     }
 
-    //Producto Name
-    public function getPro_name() : ?string{
-        return $this->pro_name;
+    //Producto Nombre
+    public function getnombre_producto() : ?string{
+        return $this->nombre_producto;
     }
 
-    public function setPro_name(string $name){
-        $this-> pro_name = $name;
+    public function setnombre_producto(string $name){
+        $this-> nombre_producto = $name;
     }
 
-    //Producto Marca
-    public function getPro_mar() : ?string{
-        return $this->pro_mar;
+    //Producto descripcion
+    public function getdescripcion_producto() : ?string{
+        return $this->descripcion_producto;
     }
 
-    public function setPro_mar(string $mar){
-        $this-> pro_mar = $mar;
+    public function setdescripcion_producto(string $descripcion){
+        $this-> descripcion_producto = $descripcion;
     }
 
-    //Producto Costo
-    public function getPro_cos() : ?float{
-        return $this->pro_cos;
+    //Producto costo producto
+    public function getCosto_produccion() : ?float{
+        return $this->costo_produccion;
     }
 
-    public function setPro_cos(float $cos){
-        $this-> pro_cos = $cos;
+    public function setCosto_produccion(float $cos){
+        $this-> costo_produccion = $cos;
     }
 
-    //Producto Precio
-    public function getPro_pre() : ?float{
-        return $this->pro_pre;
+    //Producto cantidad disponible
+    public function getCantidad_disponible() : ?int{
+        return $this->cantidad_disponible;
     }
 
-    public function setPro_pre(float $pre){
-        $this-> pro_pre = $pre;
+    public function setCantidad_disponible(float $pre){
+        $this-> cantidad_disponible = $pre;
     }
 
-    //Producto Cantidad
-    public function getPro_can() : ?int{
-        return $this->pro_can;
+    //Producto Fecha Operacion
+    public function getFecha_creacion() : ?string{
+        return $this->fecha_creacion;
     }
 
-    public function setPro_can(int $can){
-        $this-> pro_can = $can;
+    public function setFecha_creacion(string $fechop= 'default_date'){
+        $this-> fecha_creacion= $fechop;
     }
 
-    //Producto Imagen
-    public function getPro_img() : ?string{
-        return $this->pro_img;
-    }
-
-    public function setPro_img(string $img){
-        $this-> pro_img = $img;
-    }
-
-    public function Cantidad(){
+      public function Cantidad(){
         try{
-            $consulta = $this->pdo->prepare("SELECT SUM(pro_can) AS Cantidad FROM productos;");
+            $consulta = $this->pdo->prepare("SELECT SUM(cantidad_disponible) AS Cantidad FROM producto;");
             $consulta->execute();
             return $consulta->fetch(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -92,7 +83,7 @@ class Producto{
 
     public function Listar(){
         try{
-            $consulta = $this->pdo->prepare("SELECT * FROM productos;");
+            $consulta = $this->pdo->prepare("SELECT * FROM producto");
             $consulta->execute();
             return $consulta->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -103,15 +94,15 @@ class Producto{
 
     public function Insertar(Producto $p){
         try{
-            $consulta = "INSERT INTO productos(pro_name,pro_mar,pro_cos,pro_pre,pro_can) VALUES 
+            $consulta = "INSERT INTO producto (nombre_producto, descripcion_producto, costo_producción, cantidad_disponible, fecha_creación) VALUES 
             (?,?,?,?,?)";
             $this->pdo->prepare($consulta)
                 ->execute(array(
-                    $p->getPro_name(),
-                    $p->getPro_mar(),
-                    $p->getPro_cos(),
-                    $p->getPro_pre(),
-                    $p->getPro_can()
+                    $p->getnombre_producto(),
+                    $p->getdescripcion_producto(),
+                    $p->getcosto_produccion(),
+                    $p->getcantidad_disponible(),
+                    $p->getfecha_creacion()
                 ));
 
         }catch(Exception $e){
@@ -121,16 +112,16 @@ class Producto{
 
     public function Obtener($id){
         try{
-            $consulta = $this->pdo->prepare("SELECT * FROM productos WHERE pro_id=?;");
+            $consulta = $this->pdo->prepare("SELECT * FROM producto WHERE id_producto=?;");
             $consulta->execute(array($id));
             $r=$consulta->fetch(PDO::FETCH_OBJ);
             $p=new Producto();
-            $p->setPro_id($r->pro_id);
-            $p->setPro_name($r->pro_name);
-            $p->setPro_mar($r->pro_mar);
-            $p->setPro_cos($r->pro_cos);
-            $p->setPro_pre($r->pro_pre);
-            $p->setPro_can($r->pro_can);
+            $p->setId_producto($r->id_producto);
+            $p->setNombre_producto($r->nombre_producto);
+            $p->setDescripcion_producto($r->descripcion_producto);
+            $p->setCosto_produccion($r->costo_produccion);
+            $p->setCantidad_disponible($r->cantidad_disponible);
+            $p->setFecha_creacion($r->fecha_creacion);
 
             return $p;
             
@@ -144,21 +135,23 @@ class Producto{
 
     public function Actualizar(Producto $p){
         try{
-            $consulta = "UPDATE productos SET 
-            pro_name=?,
-            pro_mar=?,
-            pro_cos=?,
-            pro_pre=?,
-            pro_can=?
-            WHERE pro_id=?;";
+            $consulta = "UPDATE producto SET 
+            nombre_producto=?,
+            descripcion_producto=?,
+            costo_producción=?,
+            cantidad_disponible=?,
+            fecha_creación=?
+            WHERE id_producto=?;";
             $this->pdo->prepare($consulta)
                 ->execute(array(
-                    $p->getPro_name(),
-                    $p->getPro_mar(),
-                    $p->getPro_cos(),
-                    $p->getPro_pre(),
-                    $p->getPro_can(),
-                    $p->getPro_id()
+                    
+                    $p->getnombre_producto(),
+                    $p->getdescripcion_producto(),
+                    $p->getcosto_produccion(),
+                    $p->getcantidad_disponible(),
+                    $p->getfecha_creacion(),
+                    $p->getid_producto()
+                    
                 ));
 
         }catch(Exception $e){
@@ -168,7 +161,7 @@ class Producto{
 
     public function Eliminar($id){
         try{
-            $consulta = "DELETE FROM productos WHERE pro_id=?;";
+            $consulta = "DELETE FROM producto WHERE id_producto=?;";
             $this->pdo->prepare($consulta)
                 ->execute(array($id));
         }catch(Exception $e){

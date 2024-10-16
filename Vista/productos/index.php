@@ -20,29 +20,28 @@
                 <table class="table table-hover table-bordered" id="sampleTable">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>ID_Productos</th>
                       <th>Nombre</th>
-                      <th>Marca</th>
+                      <th>Descripcion</th>
                       <th>Costo</th>
-                      <th>Precio</th>
-                      <th>Imagen</th>
                       <th>Cantidad</th>
-                      <th>Acciones</th>
+                      <th>FechaOpercion</th>
+                   
                     </tr>
                   </thead>
                   <tbody>
-                <?php foreach($this->modelo->Listar()as$r): ?>
+                <?php foreach($this->modelo->Listar()as $r): ?>
                     <tr>
-                      <td><?=$r->pro_id?></td>
-                      <td><?=$r->pro_name?></td>
-                      <td><?=$r->pro_mar?></td>
-                      <td><?=$r->pro_cos?></td>
-                      <td><?=$r->pro_pre?></td>
-                      <td><?=$r->pro_img?></td>
-                      <td><?=$r->pro_can?></td>
+                      <td><?=$r->id_producto?></td>
+                      <td><?=$r->nombre_producto?></td>
+                      <td><?=$r->descripcion_producto?></td>
+                      <td><?=$r->costo_producción?></td>
+                      <td><?=$r->cantidad_disponible?></td>
+                      <td><?=$r->fecha_creación?></td>
+                      
                       <td>
-                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->pro_id?>"><i class="bi bi-pencil-square"></i></a>
-                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar&id=<?=$r->pro_id?>"><i class="bi bi-trash"></i></a>
+                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->id_producto?>"><i class="bi bi-pencil-square"></i></a>
+                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar&id=<?=$r->id_producto?>"><i class="bi bi-trash"></i></a>
                       </td>
                     </tr>
                 <?php endforeach;?>

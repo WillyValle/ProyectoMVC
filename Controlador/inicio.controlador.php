@@ -4,7 +4,7 @@ require_once "Modelo/producto.php";
 
 
 class InicioControlador{
-    private $modelo;
+   public $modelo;
 
     public function __CONSTRUCT(){
         $this -> modelo = new Producto();
