@@ -31,12 +31,12 @@ class ProductoControlador{
 
     public function Guardar(){
         $p=new Producto();
-        $p->setid_producto(intval($_POST['id_producto']));
-        $p->setnombre_producto($_POST['nombre_producto']);
-        $p->setdescripcion_producto($_POST['descripcion_producto']);
-        $p->setcosto_produccion($_POST['costo_producción']);
-        $p->setcantidad_disponible($_POST['cantidad_disponible']);
-        $p->setfecha_creacion($_POST['fecha_creación']);
+        $p->setid_producto(intval($_POST['ID']));
+        $p->setnombre_producto($_POST['Nombre']);
+        $p->setdescripcion_producto($_POST['Descripcion']);
+        $p->setcosto_produccion($_POST['Costo']);
+        $p->setcantidad_disponible($_POST['Cantidad']);
+        $p->setfecha_creacion($_POST['FechaOperacion']);
 
         $p->getid_producto() > 0 ?
         $this->modelo->Actualizar($p) : 
@@ -46,7 +46,7 @@ class ProductoControlador{
     }
 
     public function Borrar(){
-        $this->modelo->Eliminar($_GET["id_producto"]);
+        $this->modelo->Eliminar($_GET["id"]);
         header("location:?c=producto");
     }
 

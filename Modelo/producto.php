@@ -116,9 +116,9 @@ class Producto{
             $consulta->execute(array($id));
             $r=$consulta->fetch(PDO::FETCH_OBJ);
             $p=new Producto();
-            $p->setId_producto($r->id_producto);
-            $p->setNombre_producto($r->nombre_producto);
-            $p->setDescripcion_producto($r->descripcion_producto);
+            $p->setid_producto($r->id_producto);
+            $p->setnombre_producto($r->nombre_producto);
+            $p->setdescripcion_producto($r->descripcion_producto);
             $p->setCosto_produccion($r->costo_produccion);
             $p->setCantidad_disponible($r->cantidad_disponible);
             $p->setFecha_creacion($r->fecha_creacion);
@@ -138,18 +138,18 @@ class Producto{
             $consulta = "UPDATE producto SET 
             nombre_producto=?,
             descripcion_producto=?,
-            costo_producción=?,
+            costo_produccion=?,
             cantidad_disponible=?,
-            fecha_creación=?
+            fecha_creacion=?
             WHERE id_producto=?;";
             $this->pdo->prepare($consulta)
                 ->execute(array(
                     
                     $p->getnombre_producto(),
                     $p->getdescripcion_producto(),
-                    $p->getcosto_produccion(),
-                    $p->getcantidad_disponible(),
-                    $p->getfecha_creacion(),
+                    $p->getCosto_produccion(),
+                    $p->getCantidad_disponible(),
+                    $p->getFecha_creacion(),
                     $p->getid_producto()
                     
                 ));

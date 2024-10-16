@@ -18,7 +18,7 @@
                 <form method ="POST" action="?c=producto&a=Guardar">
                     <legend><?=$titulo?> Producto</legend>
                     <div class="mb-3">
-                    <input class="form-control" name="ID" type="hidden" value="<?=$p->get()?>">
+                    <input class="form-control" name="ID" type="hidden" value="<?=$p->getid_producto()?>">
                     </div>
                 
                     <div class="mb-3">
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="mb-3">
-                    <label class="form-label" for="fechaOperacion">FechaoOperacion</label>
+                    <label class="form-label" for="fechaOperacion">FechaOperacion</label>
                     <input required class="form-control" name="FechaOperacion" type="number" placeholder="FechaOperacion" value="<?=$p->getfecha_creacion()?>">
                     </div>
                  </div>
