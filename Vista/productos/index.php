@@ -25,7 +25,7 @@
                       <th>Descripcion</th>
                       <th>Costo</th>
                       <th>Cantidad</th>
-                      <th>Fecha_Operacion</th>
+                      <th>Fecha Operacion</th>
                    
                     </tr>
                   </thead>

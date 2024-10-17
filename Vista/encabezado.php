@@ -55,7 +55,7 @@
         <li><a class="app-menu__item active" href="index.php"><i class="app-menu__icon bi bi-speedometer"></i><span class="app-menu__label">Dashboard</span></a></li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-laptop"></i><span class="app-menu__label">Inventario - Productos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listar</a></li>
+            <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listado Productos</a></li>
             
           </ul>
         </li>
