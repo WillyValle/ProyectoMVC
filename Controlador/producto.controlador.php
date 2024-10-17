@@ -20,7 +20,7 @@ class ProductoControlador{
         $titulo="Registrar";
         $p=new Producto();
         if(isset($_GET['id_producto'])){
-            $p=$this->modelo->Obtener($_GET['id_producto']);
+            $p=$this->modelo->Obtener_Producto($_GET['id_producto']);
             $titulo = "Modificar";
         }
 

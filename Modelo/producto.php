@@ -110,7 +110,7 @@ class Producto{
         }
     }
 
-    public function Obtener($id){
+    public function Obtener_Producto($id){
         try{
             $consulta = $this->pdo->prepare("SELECT * FROM producto WHERE id_producto=?;");
             $consulta->execute(array($id));

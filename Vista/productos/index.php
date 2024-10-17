@@ -35,13 +35,13 @@
                       <td><?=$r->id_producto?></td>
                       <td><?=$r->nombre_producto?></td>
                       <td><?=$r->descripcion_producto?></td>
-                      <td><?=$r->costo_producción?></td>
+                      <td><?=$r->costo_produccion?></td>
                       <td><?=$r->cantidad_disponible?></td>
-                      <td><?=$r->fecha_creación?></td>
+                      <td><?=$r->fecha_creacion?></td>
                       
                       <td>
-                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->id_producto?>"><i class="bi bi-pencil-square"></i></a>
-                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar&id=<?=$r->id_producto?>"><i class="bi bi-trash"></i></a>
+                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id_producto=<?=$r->id_producto?>"><i class="bi bi-pencil-square"></i></a>
+                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar&id_producto=<?=$r->id_producto?>"><i class="bi bi-trash"></i></a>
                       </td>
                     </tr>
                 <?php endforeach;?>

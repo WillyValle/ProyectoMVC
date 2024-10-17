@@ -43,7 +43,7 @@
 
                     <div class="mb-3">
                     <label class="form-label" for="fechaOperacion">FechaOperacion</label>
-                    <input required class="form-control" name="FechaOperacion" type="number" placeholder="FechaOperacion" value="<?=$p->getfecha_creacion()?>">
+                    <input required class="form-control" name="FechaOperacion" type="date" placeholder="FechaOperacion" value="<?=$p->getfecha_creacion()?>">
                     </div>
                  </div>
                   <div class="tile-footer">
