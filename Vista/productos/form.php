@@ -18,32 +18,32 @@
                 <form method ="POST" action="?c=producto&a=Guardar">
                     <legend><?=$titulo?> Producto</legend>
                     <div class="mb-3">
-                    <input class="form-control" name="ID" type="hidden" value="<?=$p->getid_producto()?>">
+                    <input class="form-control" name="ID" type="hidden" value="<?=$p->getId_producto()?>">
                     </div>
                 
                     <div class="mb-3">
                     <label class="form-label" for="Nombre">Nombre</label>
-                    <input required class="form-control" name="Nombre" type="text" placeholder="Nombre" value="<?=$p->getnombre_producto()?>">
+                    <input required class="form-control" name="Nombre" type="text" placeholder="Nombre" value="<?=$p->getNombre_producto()?>">
                     </div>
                  
                     <div class="mb-3">
                     <label class="form-label" for="Descripcion">Descripcion</label>
-                    <input required class="form-control" name="Descripcion" type="text" placeholder="Descripcion" value="<?=$p->getdescripcion_producto()?>">
+                    <input required class="form-control" name="Descripcion" type="text" placeholder="Descripcion" value="<?=$p->getDescripcion_producto()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="Costo">Costo</label>
-                    <input required class="form-control" name="Costo" type="number" placeholder="Costo" value="<?=$p->getcosto_produccion()?>">
+                    <input required class="form-control" name="Costo" type="number" placeholder="Costo" value="<?=$p->getCosto_produccion()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="Cantidad">Cantidad</label>
-                    <input required class="form-control" name="Cantidad" type="number" placeholder="Cantidad" value="<?=$p->getcantidad_disponible()?>">
+                    <input required class="form-control" name="Cantidad" type="number" placeholder="Cantidad" value="<?=$p->getCantidad_disponible()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="fechaOperacion">FechaOperacion</label>
-                    <input required class="form-control" name="FechaOperacion" type="date" placeholder="FechaOperacion" value="<?=$p->getfecha_creacion()?>">
+                    <input required class="form-control" name="FechaOperacion" type="date" placeholder="FechaOperacion" value="<?=$p->getFecha_creacion()?>">
                     </div>
                  </div>
                   <div class="tile-footer">

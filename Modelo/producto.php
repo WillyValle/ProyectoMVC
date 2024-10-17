@@ -17,29 +17,29 @@ class Producto{
     }
 
     //Producto ID
-    public function getid_producto() : ?int{
+    public function getId_producto() : ?int{
         return $this->id_producto;
     }
 
-    public function setid_producto(int $id){
+    public function setId_producto(int $id){
         $this-> id_producto = $id;
     }
 
     //Producto Nombre
-    public function getnombre_producto() : ?string{
+    public function getNombre_producto() : ?string{
         return $this->nombre_producto;
     }
 
-    public function setnombre_producto(string $name){
+    public function setNombre_producto(string $name){
         $this-> nombre_producto = $name;
     }
 
     //Producto descripcion
-    public function getdescripcion_producto() : ?string{
+    public function getDescripcion_producto() : ?string{
         return $this->descripcion_producto;
     }
 
-    public function setdescripcion_producto(string $descripcion){
+    public function setDescripcion_producto(string $descripcion){
         $this-> descripcion_producto = $descripcion;
     }
 
@@ -53,7 +53,7 @@ class Producto{
     }
 
     //Producto cantidad disponible
-    public function getCantidad_disponible() : ?int{
+    public function getCantidad_disponible() : ?float{
         return $this->cantidad_disponible;
     }
 
@@ -98,11 +98,11 @@ class Producto{
             (?,?,?,?,?)";
             $this->pdo->prepare($consulta)
                 ->execute(array(
-                    $p->getnombre_producto(),
-                    $p->getdescripcion_producto(),
-                    $p->getcosto_produccion(),
-                    $p->getcantidad_disponible(),
-                    $p->getfecha_creacion()
+                    $p->getNombre_producto(),
+                    $p->getDescripcion_producto(),
+                    $p->getCosto_produccion(),
+                    $p->getCantidad_disponible(),
+                    $p->getFecha_creacion()
                 ));
 
         }catch(Exception $e){
@@ -116,9 +116,9 @@ class Producto{
             $consulta->execute(array($id));
             $r=$consulta->fetch(PDO::FETCH_OBJ);
             $p=new Producto();
-            $p->setid_producto($r->id_producto);
-            $p->setnombre_producto($r->nombre_producto);
-            $p->setdescripcion_producto($r->descripcion_producto);
+            $p->setId_producto($r->id_producto);
+            $p->setNombre_producto($r->nombre_producto);
+            $p->setDescripcion_producto($r->descripcion_producto);
             $p->setCosto_produccion($r->costo_produccion);
             $p->setCantidad_disponible($r->cantidad_disponible);
             $p->setFecha_creacion($r->fecha_creacion);
@@ -150,7 +150,7 @@ class Producto{
                     $p->getCosto_produccion(),
                     $p->getCantidad_disponible(),
                     $p->getFecha_creacion(),
-                    $p->getid_producto()
+                    $p->getId_producto()
                     
                 ));
 
