@@ -19,8 +19,8 @@ class ProductoControlador{
     public function FormCrear(){
         $titulo="Registrar";
         $p=new Producto();
-        if(isset($_GET['id'])){
-            $p=$this->modelo->Obtener($_GET['id']);
+        if(isset($_GET['id_producto'])){
+            $p=$this->modelo->Obtener_Producto($_GET['id_producto']);
             $titulo = "Modificar";
         }
 
@@ -31,14 +31,14 @@ class ProductoControlador{
 
     public function Guardar(){
         $p=new Producto();
-        $p->setPro_id(intval($_POST['ID']));
-        $p->setPro_name($_POST['Nombre']);
-        $p->setPro_mar($_POST['Marca']);
-        $p->setPro_cos($_POST['Costo']);
-        $p->setPro_pre($_POST['Precio']);
-        $p->setPro_can($_POST['Cantidad']);
+        $p->setid_producto(intval($_POST['ID']));
+        $p->setnombre_producto($_POST['Nombre']);
+        $p->setdescripcion_producto($_POST['Descripcion']);
+        $p->setcosto_produccion($_POST['Costo']);
+        $p->setcantidad_disponible($_POST['Cantidad']);
+        $p->setfecha_creacion($_POST['FechaOperacion']);
 
-        $p->getPro_id() > 0 ?
+        $p->getid_producto() > 0 ?
         $this->modelo->Actualizar($p) : 
         $this->modelo->Insertar($p);
 

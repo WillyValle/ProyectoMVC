@@ -19,5 +19,6 @@ class BasedeDatos{
             return "Fallo ".$e->getMessage();
 
         }
+        
     }
 }

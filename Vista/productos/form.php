@@ -6,7 +6,7 @@
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
-          <li class="breadcrumb-item">Productos</li>
+          <li class="breadcrumb-item">Producto</li>
           <li class="breadcrumb-item"><a href="#"><?=$titulo?> Producto</a></li>
         </ul>
       </div>
@@ -18,32 +18,32 @@
                 <form method ="POST" action="?c=producto&a=Guardar">
                     <legend><?=$titulo?> Producto</legend>
                     <div class="mb-3">
-                    <input class="form-control" name="ID" type="hidden" value="<?=$p->getPro_id()?>">
+                    <input class="form-control" name="ID" type="hidden" value="<?=$p->getid_producto()?>">
                     </div>
                 
                     <div class="mb-3">
                     <label class="form-label" for="Nombre">Nombre</label>
-                    <input required class="form-control" name="Nombre" type="text" placeholder="Nombre Producto" value="<?=$p->getPro_name()?>">
+                    <input required class="form-control" name="Nombre" type="text" placeholder="Nombre" value="<?=$p->getnombre_producto()?>">
                     </div>
                  
                     <div class="mb-3">
-                    <label class="form-label" for="Marca">Marca</label>
-                    <input required class="form-control" name="Marca" type="text" placeholder="Marca" value="<?=$p->getPro_mar()?>">
+                    <label class="form-label" for="Descripcion">Descripcion</label>
+                    <input required class="form-control" name="Descripcion" type="text" placeholder="Descripcion" value="<?=$p->getdescripcion_producto()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="Costo">Costo</label>
-                    <input required class="form-control" name="Costo" type="number" placeholder="Costo" value="<?=$p->getPro_cos()?>">
-                    </div>
-
-                    <div class="mb-3">
-                    <label class="form-label" for="Precio">Precio</label>
-                    <input required class="form-control" name="Precio" type="number" placeholder="Precio" value="<?=$p->getPro_pre()?>">
+                    <input required class="form-control" name="Costo" type="number" placeholder="Costo" value="<?=$p->getcosto_produccion()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="Cantidad">Cantidad</label>
-                    <input required class="form-control" name="Cantidad" type="number" placeholder="Cantidad" value="<?=$p->getPro_can()?>">
+                    <input required class="form-control" name="Cantidad" type="number" placeholder="Cantidad" value="<?=$p->getcantidad_disponible()?>">
+                    </div>
+
+                    <div class="mb-3">
+                    <label class="form-label" for="fechaOperacion">FechaOperacion</label>
+                    <input required class="form-control" name="FechaOperacion" type="date" placeholder="FechaOperacion" value="<?=$p->getfecha_creacion()?>">
                     </div>
                  </div>
                   <div class="tile-footer">
