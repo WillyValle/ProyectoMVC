@@ -59,22 +59,29 @@
             
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-ui-checks"></i><span class="app-menu__label">Pedidos -Clientes</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-cart2"></i><span class="app-menu__label">Pedidos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listar</a></li>
+            <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i> Información Clientes</a></li>
+            <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i> Información Pedidos</a></li>
+            <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nuevo Pedido</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label">Materia Prima</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-house-down-fill"></i><span class="app-menu__label">Materia Prima</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listar</a></li>
-            
+            <li><a class="treeview-item" href="#"><i class="icon bi bi-circle-fill"></i>Inventario Materia Prima</a></li>
+            <li><a class="treeview-item" href="?c=materiaprima" rel="noopener"><i class="icon bi bi-circle-fill"></i>Registro Materia Prima</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-file-earmark"></i><span class="app-menu__label">Producción</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-tools"></i><span class="app-menu__label">Producción</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listar</a></li>
+            <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i>Producto Terminado</a></li>
+            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
+            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nueva Produccion</a></li>
           </ul>
         </li>
-        
+
       </ul>
     </aside>
