@@ -5,7 +5,7 @@ class BasedeDatos{
     const servidor="localhost";
     const usuariobd = "root";
     const clave = "";
-    const nombrebd = "proyectomvc";
+    const nombrebd = "textilsmartdb";
 
     public static function Conectar(){
         try {
@@ -20,5 +20,4 @@ class BasedeDatos{
 
         }
     }
-
 }

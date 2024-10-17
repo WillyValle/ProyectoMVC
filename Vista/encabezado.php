@@ -100,29 +100,29 @@
             <li><a class="treeview-item" href="widgets.html"><i class="icon bi bi-circle-fill"></i> Widgets</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-ui-checks"></i><span class="app-menu__label">Forms</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-cart2"></i><span class="app-menu__label">Pedidos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="form-components.html"><i class="icon bi bi-circle-fill"></i> Form Components</a></li>
-            <li><a class="treeview-item" href="form-samples.html"><i class="icon bi bi-circle-fill"></i> Form Samples</a></li>
+            <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i> Información Clientes</a></li>
+            <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i> Información Pedidos</a></li>
+            <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nuevo Pedido</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label">Tables</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-house-down-fill"></i><span class="app-menu__label">Materia Prima</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="table-basic.html"><i class="icon bi bi-circle-fill"></i> Basic Tables</a></li>
-            <li><a class="treeview-item" href="table-data-table.html"><i class="icon bi bi-circle-fill"></i> Data Tables</a></li>
+            <li><a class="treeview-item" href="#"><i class="icon bi bi-circle-fill"></i>Inventario Materia Prima</a></li>
+            <li><a class="treeview-item" href="?c=materiaprima" rel="noopener"><i class="icon bi bi-circle-fill"></i>Registro Materia Prima</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-file-earmark"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-tools"></i><span class="app-menu__label">Producción</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="blank-page.html"><i class="icon bi bi-circle-fill"></i> Blank Page</a></li>
-            <li><a class="treeview-item" href="page-login.html"><i class="icon bi bi-circle-fill"></i> Login Page</a></li>
-            <li><a class="treeview-item" href="page-lockscreen.html"><i class="icon bi bi-circle-fill"></i> Lockscreen Page</a></li>
-            <li><a class="treeview-item" href="page-user.html"><i class="icon bi bi-circle-fill"></i> User Page</a></li>
-            <li><a class="treeview-item" href="page-invoice.html"><i class="icon bi bi-circle-fill"></i> Invoice Page</a></li>
-            <li><a class="treeview-item" href="page-mailbox.html"><i class="icon bi bi-circle-fill"></i> Mailbox</a></li>
-            <li><a class="treeview-item" href="page-error.html"><i class="icon bi bi-circle-fill"></i> Error Page</a></li>
+            <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i>Producto Terminado</a></li>
+            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
+            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nueva Produccion</a></li>
           </ul>
         </li>
-        <li><a class="app-menu__item" href="docs.html"><i class="app-menu__icon bi bi-code-square"></i><span class="app-menu__label">Docs</span></a></li>
+
       </ul>
     </aside>
