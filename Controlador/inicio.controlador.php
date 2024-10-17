@@ -6,6 +6,7 @@ require_once "Modelo/materiaprima.php"; // Añadir el modelo de materia prima
 
 
 class InicioControlador{
+=======
     private $modeloProducto;
     private $modeloCliente; // Añadir la propiedad para clientes
     private $modeloMateriaPrima; // Añadir la propiedad para materia prima
