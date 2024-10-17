@@ -170,7 +170,6 @@ class MateriaPrima{
             die($e->getMessage());
         }
     }
-
     public function EliminarMP($id){
         try{
             $consulta = "DELETE FROM materia_prima WHERE id_materia_prima=?;";
