@@ -2,11 +2,11 @@
       <div class="app-title">
         <div>
           <h1><i class="bi bi-table"></i> Inventario Materia Prima</h1>
-          <p>Table to display analytical data effectively</p>
+          <p>Descripción de la cantidad de materia prima</p>
         </div>
         <ul class="app-breadcrumb breadcrumb side">
           <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
-          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item">Materia Prima</li>
           <li class="breadcrumb-item active"><a href="#">Inventario Materia Prima</a></li>
         </ul>
       <div><a class="btn btn-primary btn-flat" href="?c=inventariomp&a=FormCrearInventarioMP"><i class="bi bi-plus-circle"></i></a>

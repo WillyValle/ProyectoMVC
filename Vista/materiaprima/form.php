@@ -28,17 +28,17 @@
                  
                     <div class="mb-3">
                     <label class="form-label" for="Descripcion">Descripcion</label>
-                    <input required class="form-control" name="Descripcion" type="text" placeholder="Descripcion" value="<?=$p->getDescripcionMP()?>">
+                    <textarea required class="form-control" name="Descripcion" type="text" placeholder="Descripcion" value="<?=$p->getDescripcionMP()?>"rows="4"></textarea>
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="unidad_medida">Unidad de Medida</label>
-                    <input required class="form-control" name="unidad_medida" type="text" placeholder="Unidad de Medida" value="<?=$p->getUnidad_MedidaMP()?>">
+                    <input required class="form-control" name="unidad_medida" type="text" placeholder="kg / lb / oz" value="<?=$p->getUnidad_MedidaMP()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="costo_unitario">Costo Unitario</label>
-                    <input required class="form-control" name="costo_unitario" type="number" placeholder="Costo Unitario" value="<?=$p->getCostoMP()?>">
+                    <input required class="form-control" name="costo_unitario" type="number" step="0.01" placeholder="GTQ" value="<?=$p->getCostoMP()?>">
                     </div>
 
                     <div class="mb-3">

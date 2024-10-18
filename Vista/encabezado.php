@@ -24,7 +24,7 @@
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="index.php">Textiles</a>
+    <header class="app-header"><a class="app-header__logo" href="index.php">TextilSmart</a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
@@ -47,7 +47,7 @@
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name">Textiles</p>
+          <p class="app-sidebar__user-name">Administrador</p>
           <p class="app-sidebar__user-designation">Análisis de Sistemas</p>
         </div>
       </div>
@@ -71,14 +71,14 @@
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-house-down-fill"></i><span class="app-menu__label">Materia Prima</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="?c=inventariomp"><i class="icon bi bi-circle-fill"></i>Inventario Materia Prima</a></li>
-            <li><a class="treeview-item" href="?c=materiaprima" rel="noopener"><i class="icon bi bi-circle-fill"></i>Registro Materia Prima</a></li>
+            <li><a class="treeview-item" href="?c=materiaprima" rel="noopener"><i class="icon bi bi-circle-fill"></i>Listado Materia Prima</a></li>
           </ul>
         </li>
 
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-tools"></i><span class="app-menu__label">Producción</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i>Producto Terminado</a></li>
-            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
+            <li><a class="treeview-item" href="?c=proceso" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
             <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nueva Produccion</a></li>
           </ul>
         </li>

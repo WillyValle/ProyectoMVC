@@ -33,7 +33,7 @@
 
                     <div class="mb-3">
                     <label class="form-label" for="Costo">Costo</label>
-                    <input required class="form-control" name="Costo" type="number" placeholder="Costo" value="<?=$p->getCosto_produccion()?>">
+                    <input required class="form-control" name="Costo" type="number" step="0.01" placeholder="Costo" value="<?=$p->getCosto_produccion()?>">
                     </div>
 
                     <div class="mb-3">

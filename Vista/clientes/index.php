@@ -1,13 +1,13 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="bi bi-table"></i> Data Table</h1>
-          <p>Table to display analytical data effectively</p>
+          <h1><i class="bi bi-table"></i> Información de Clientes</h1>
+          <p>Descripción detallada de los clientes</p>
         </div>
         <ul class="app-breadcrumb breadcrumb side">
           <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
-          <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active"><a href="#">Data Table</a></li>
+          <li class="breadcrumb-item">Pedidos</li>
+          <li class="breadcrumb-item active"><a href="#">Informacion Clientes</a></li>
         </ul>
       <div><a class="btn btn-primary btn-flat" href="?c=cliente&a=FormCrearCliente"><i class="bi bi-plus-circle"></i></a>
       </div>

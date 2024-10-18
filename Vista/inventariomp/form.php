@@ -7,7 +7,7 @@
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
-          <li class="breadcrumb-item">Inventario Materia Prima</li>
+          <li class="breadcrumb-item">Materia Prima</li>
           <li class="breadcrumb-item"><a href="#"><?=$titulo?> Inventario Materia Prima</a></li>
         </ul>
       </div>
@@ -36,17 +36,17 @@
 
                     <div class="mb-3">
                     <label class="form-label" for="cantidad_disponible">Cantidad Disponible</label>
-                    <input required class="form-control" name="cantidad_disponible" type="number" placeholder="Cantidad Disponible" value="<?=$p->getCantidadDisponible()?>">
+                    <input required class="form-control" name="cantidad_disponible" type="number" placeholder="Cantidad Según Unidad de Medida (kg,lb,oz)" value="<?=$p->getCantidadDisponible()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="ubicacion">Ubicacion</label>
-                    <input required class="form-control" name="ubicacion" type="text" placeholder="Ubicacion" value="<?=$p->getUbicacion()?>">
+                    <input required class="form-control" name="ubicacion" type="text" placeholder="Ubicación" value="<?=$p->getUbicacion()?>">
                     </div>
 
                     <div class="mb-3">
                     <label class="form-label" for="fecha_actualizacion">Fecha de Actualizacion</label>
-                    <input required class="form-control" name="fecha_actualizacion" type="date" placeholder="Fecha de Actualizacion" value="<?=$p->getUpdateDate()?>">
+                    <input required class="form-control" name="fecha_actualizacion" type="date" placeholder="Fecha de Actualización" value="<?=$p->getUpdateDate()?>">
                     </div>
 
                  </div>
