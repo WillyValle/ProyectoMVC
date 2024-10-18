@@ -70,7 +70,7 @@
 
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-house-down-fill"></i><span class="app-menu__label">Materia Prima</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon bi bi-circle-fill"></i>Inventario Materia Prima</a></li>
+            <li><a class="treeview-item" href="?c=inventariomp"><i class="icon bi bi-circle-fill"></i>Inventario Materia Prima</a></li>
             <li><a class="treeview-item" href="?c=materiaprima" rel="noopener"><i class="icon bi bi-circle-fill"></i>Registro Materia Prima</a></li>
           </ul>
         </li>
