@@ -134,10 +134,7 @@ class MateriaPrima{
             $p->setCostoMP($r->costo_unitario);
             $p->setIngresoFecha($r->fecha_ingreso);
             $p->setUpdateDate($r->fecha_actualizacion);
-
             return $p;
-            
-
 
         }catch(Exception $e){
             die($e->getMessage());

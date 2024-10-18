@@ -94,7 +94,7 @@ class Producto{
 
     public function Insertar(Producto $p){
         try{
-            $consulta = "INSERT INTO producto (nombre_producto, descripcion_producto, costo_producción, cantidad_disponible, fecha_creación) VALUES 
+            $consulta = "INSERT INTO producto (nombre_producto, descripcion_producto, costo_produccion, cantidad_disponible, fecha_creacion) VALUES 
             (?,?,?,?,?)";
             $this->pdo->prepare($consulta)
                 ->execute(array(
