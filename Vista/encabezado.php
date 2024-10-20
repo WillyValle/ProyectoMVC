@@ -79,7 +79,7 @@
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i>Producto Terminado</a></li>
             <li><a class="treeview-item" href="?c=proceso" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
-            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nueva Produccion</a></li>
+            <li><a class="treeview-item" href="?c=produccion"><i class="icon bi bi-circle-fill"></i>Proceso Produccion</a></li>
           </ul>
         </li>
 
