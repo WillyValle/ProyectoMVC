@@ -6,6 +6,7 @@ require_once "Modelo/materiaprima.php"; // Añadir el modelo de materia prima
 require_once "Modelo/inventariomp.php";
 
 class InicioControlador{
+    private $modelo;
     private $modeloProducto;
     private $modeloCliente; // Añadir la propiedad para clientes
     private $modeloMateriaPrima; // Añadir la propiedad para materia prima
@@ -16,6 +17,7 @@ class InicioControlador{
         $this -> modeloCliente = new Cliente(); // Instanciar el modelo de clientes
         $this -> modeloMateriaPrima = new MateriaPrima(); // Instanciar el modelo de materia prima
         $this -> modeloInventarioMP = new InventarioMP(); // Instanciar el modelo de inventario de materia prima
+        $this -> modelo = new Producto();
     }
 
     public function Inicio(){
