@@ -80,16 +80,19 @@ class MateriaPrima{
     }
 
 
-    /*public function Cantidad(){
-        try{
-            $consulta = $this->pdo->prepare("SELECT SUM(pro_can) AS Cantidad FROM productos;");
+    public function NivelesMateriaPrima() {
+        try {
+            $consulta = $this->pdo->prepare("
+                SELECT imp.id_materia_prima, mp.nombre, imp.cantidad_disponible, imp.fecha_actualizacion
+                FROM inventariomateriaprima imp
+                JOIN materia_prima mp ON imp.id_materia_prima = mp.id_materia_prima;
+            ");
             $consulta->execute();
-            return $consulta->fetch(PDO::FETCH_OBJ);
-        }catch(Exception $e){
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
             die($e->getMessage());
-
         }
-    }*/
+    }
 
     public function ListarMP(){
         try{
