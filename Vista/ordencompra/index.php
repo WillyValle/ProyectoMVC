@@ -6,6 +6,7 @@
         <tr>
             <th>ID Orden</th>
             <th>ID Materia Prima</th>
+            <th>Nombre Materia Prima</th>
             <th>Cantidad</th>
             <th>Fecha Solicitud</th>
             <th>Costo</th>
@@ -13,10 +14,11 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach($this->modelo->ListarOrdenesCompra() as $orden): ?>
+        <?php foreach($this->modeloOrden->ListarOrdenesCompra() as $orden): ?>
         <tr>
             <td><?= $orden->id_orden_compra ?></td>
             <td><?= $orden->id_materia_prima ?></td>
+            <td><?= $orden->nombre_materia_prima ?></td>
             <td><?= $orden->cantidad ?></td>
             <td><?= $orden->fecha_solicitud ?></td>
             <td><?= $orden->costo ?></td>

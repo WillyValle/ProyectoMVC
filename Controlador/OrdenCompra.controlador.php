@@ -1,7 +1,7 @@
 <?php
 
-require_once "modeloOrden/ordenCompra.php";
-require_once "modeloOrden/materiaprima.php";
+require_once "Modelo/ordencompra.php";
+require_once "Modelo/materiaprima.php";
 
 class OrdenCompraControlador {
 
@@ -22,8 +22,8 @@ class OrdenCompraControlador {
         $orden = new OrdenCompra();
 
         // Obtener todas las materias primas
-        $modeloOrdenMateriaPrima = new MateriaPrima();
-        $materiasPrimas = $modeloOrdenMateriaPrima->ListarMP();
+        $modeloMateriaPrima = new MateriaPrima();
+        $materiasPrimas = $modeloMateriaPrima->ListarMP();
 
         if (isset($_GET['id'])) {
             $orden = $this->modeloOrden->ObtenerOrdenCompra($_GET['id']);
