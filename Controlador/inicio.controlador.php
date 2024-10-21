@@ -5,6 +5,7 @@ require_once "Modelo/cliente.php"; // Añadir el modelo de clientes
 require_once "Modelo/materiaprima.php"; // Añadir el modelo de materia prima
 require_once "Modelo/inventariomp.php";
 require_once "Modelo/inventarioproducto.php";
+require_once "Modelo/detallepedido.php";
 
 
 class InicioControlador{
@@ -13,7 +14,8 @@ class InicioControlador{
     private $modeloMateriaPrima; // Añadir la propiedad para materia prima
     private $modeloInventarioMP; // Añadir la propiedad para inventario de materia prima
 
-    private $modeloinventarioproducto;
+    private $modeloinventarioproducto; // Propiedad Inventario Producto
+    private $modelodetallepedido; // Propiedad Detalle Pedido
     
 
     public function __CONSTRUCT(){
@@ -21,7 +23,8 @@ class InicioControlador{
         $this -> modeloCliente = new Cliente(); // Instanciar el modelo de clientes
         $this -> modeloMateriaPrima = new MateriaPrima(); // Instanciar el modelo de materia prima
         $this -> modeloInventarioMP = new InventarioMP(); // Instanciar el modelo de inventario de materia prima
-        $this -> modeloinventarioproducto = new InventarioProducto();
+        $this -> modeloinventarioproducto = new InventarioProducto(); // Instancia Inventario Producto
+        $this -> modelodetallepedido = new DetallePedido(); // Instancia Detalle Pedido
     }
 
     public function Inicio(){

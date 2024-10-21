@@ -56,7 +56,7 @@
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-laptop"></i><span class="app-menu__label">Ingreso Productos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listado Productos</a></li>
-            <li><a class="treeview-item" href="?c=InventarioProducto" ><i class="icon bi bi-circle-fill"></i> Inventario Productos</a></li>
+            <li><a class="treeview-item" href="?c=inventarioproducto" ><i class="icon bi bi-circle-fill"></i> Inventario Productos</a></li>
             
           </ul>
         </li>
@@ -66,6 +66,7 @@
             <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i> Información Clientes</a></li>
             <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i> Información Pedidos</a></li>
             <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nuevo Pedido</a></li>
+            <li><a class="treeview-item" href="?c=detallepedido"><i class="icon bi bi-circle-fill"></i>Detalle Pedido</a></li>          
           </ul>
         </li>
 
