@@ -70,14 +70,13 @@ class Producto{
         $this-> fecha_creacion= $fechop;
     }
 
-      public function Cantidad(){
-        try{
-            $consulta = $this->pdo->prepare("SELECT SUM(cantidad_disponible) AS Cantidad FROM producto;");
+    public function Cantidad() {
+        try {
+            $consulta = $this->pdo->prepare("SELECT id_producto, nombre_producto, cantidad_disponible AS Cantidad FROM producto;");
             $consulta->execute();
-            return $consulta->fetch(PDO::FETCH_OBJ);
-        }catch(Exception $e){
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
             die($e->getMessage());
-
         }
     }
 
