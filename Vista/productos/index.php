@@ -1,13 +1,13 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="bi bi-table"></i> Inventario</h1>
+          <h1><i class="bi bi-table"></i> Productos</h1>
          <p></p>
         </div>
         <ul class="app-breadcrumb breadcrumb side">
           <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
           <li class="breadcrumb-item">Producto</li>
-          <li class="breadcrumb-item active"><a href="#">Inventario - Productos</a></li>
+          <li class="breadcrumb-item active"><a href="#">Listado de Productos</a></li>
         </ul>
       <div><a class="btn btn-primary btn-flat" href="?c=producto&a=FormCrear"><i class="bi bi-plus-circle"></i></a>
       </div>
