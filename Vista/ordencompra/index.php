@@ -20,6 +20,7 @@
               <thead>
                 <tr>
                   <th>ID Orden</th>
+                  <th>No Orden Compra</th> <!-- Nueva columna -->
                   <th>ID Materia Prima</th>
                   <th>Cantidad</th>
                   <th>Fecha Solicitud</th>
@@ -31,6 +32,7 @@
                 <?php foreach($this->modeloOrden->ListarOrdenesCompra() as $orden): ?>
                 <tr>
                   <td><?= $orden->id_orden_compra ?></td>
+                  <td><?= $orden->No_OrdenCompra ?></td> <!-- Nuevo dato -->
                   <td><?= $orden->id_materia_prima ?></td>
                   <td><?= $orden->cantidad ?></td>
                   <td><?= $orden->fecha_solicitud ?></td>

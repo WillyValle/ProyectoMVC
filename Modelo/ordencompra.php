@@ -5,6 +5,7 @@ class OrdenCompra {
     private $pdo;
 
     private $id_orden_compra;
+    private $No_OrdenCompra; // Nueva propiedad
     private $id_materia_prima;
     private $cantidad;
     private $fecha_solicitud;
@@ -21,6 +22,15 @@ class OrdenCompra {
 
     public function setIdOrdenCompra(string $id) {
         $this->id_orden_compra = $id;
+    }
+
+    // No Orden Compra
+    public function getNoOrdenCompra() : ?string {
+        return $this->No_OrdenCompra;
+    }
+
+    public function setNoOrdenCompra(string $noOrden) {
+        $this->No_OrdenCompra = $noOrden;
     }
 
     // ID Materia Prima
@@ -62,10 +72,11 @@ class OrdenCompra {
     // Insertar Orden de Compra
     public function InsertarOrdenCompra(OrdenCompra $orden) {
         try {
-            $consulta = "INSERT INTO orden_compra (id_orden_compra, id_materia_prima, cantidad, fecha_solicitud, costo) VALUES (?, ?, ?, ?, ?)";
+            $consulta = "INSERT INTO orden_compra (id_orden_compra, No_OrdenCompra, id_materia_prima, cantidad, fecha_solicitud, costo) VALUES (?, ?, ?, ?, ?, ?)";
             $this->pdo->prepare($consulta)
                 ->execute(array(
                     $orden->getIdOrdenCompra(),
+                    $orden->getNoOrdenCompra(),
                     $orden->getIdMateriaPrima(),
                     $orden->getCantidad(),
                     $orden->getFechaSolicitud(),
@@ -84,6 +95,7 @@ class OrdenCompra {
             $r = $consulta->fetch(PDO::FETCH_OBJ);
             $orden = new OrdenCompra();
             $orden->setIdOrdenCompra($r->id_orden_compra);
+            $orden->setNoOrdenCompra($r->No_OrdenCompra); // Nuevo atributo
             $orden->setIdMateriaPrima($r->id_materia_prima);
             $orden->setCantidad($r->cantidad);
             $orden->setFechaSolicitud($r->fecha_solicitud);
@@ -109,9 +121,10 @@ class OrdenCompra {
     // Actualizar Orden de Compra
     public function ActualizarOrdenCompra(OrdenCompra $orden) {
         try {
-            $consulta = "UPDATE orden_compra SET id_materia_prima = ?, cantidad = ?, fecha_solicitud = ?, costo = ? WHERE id_orden_compra = ?";
+            $consulta = "UPDATE orden_compra SET No_OrdenCompra = ?, id_materia_prima = ?, cantidad = ?, fecha_solicitud = ?, costo = ? WHERE id_orden_compra = ?";
             $this->pdo->prepare($consulta)
                 ->execute(array(
+                    $orden->getNoOrdenCompra(), // Nuevo atributo
                     $orden->getIdMateriaPrima(),
                     $orden->getCantidad(),
                     $orden->getFechaSolicitud(),
