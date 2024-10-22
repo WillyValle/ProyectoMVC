@@ -2,6 +2,7 @@
 
 require_once "Modelo/pedido.php";
 require_once "Modelo/producto.php";
+require_once "Modelo/detallepedido.php";
 
 class PedidoControlador {
 
