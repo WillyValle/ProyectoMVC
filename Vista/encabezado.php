@@ -53,9 +53,10 @@
       </div>
       <ul class="app-menu">
         <li><a class="app-menu__item active" href="index.php"><i class="app-menu__icon bi bi-speedometer"></i><span class="app-menu__label">Dashboard</span></a></li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-laptop"></i><span class="app-menu__label">Inventario - Productos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-laptop"></i><span class="app-menu__label">Ingreso Productos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="?c=producto"><i class="icon bi bi-circle-fill"></i> Listado Productos</a></li>
+            <li><a class="treeview-item" href="?c=inventarioproducto" ><i class="icon bi bi-circle-fill"></i> Inventario Productos</a></li>
             
           </ul>
         </li>
@@ -65,6 +66,7 @@
             <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i> Información Clientes</a></li>
             <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i> Información Pedidos</a></li>
             <li><a class="treeview-item" href="#" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nuevo Pedido</a></li>
+            <li><a class="treeview-item" href="?c=detallepedido"><i class="icon bi bi-circle-fill"></i>Detalle Pedido</a></li>          
           </ul>
         </li>
 
@@ -77,9 +79,9 @@
 
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-tools"></i><span class="app-menu__label">Producción</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="?c=cliente"><i class="icon bi bi-circle-fill"></i>Producto Terminado</a></li>
+            <li><a class="treeview-item" href="?c=productoproduccion"><i class="icon bi bi-circle-fill"></i>Producto en Producción</a></li>
             <li><a class="treeview-item" href="?c=proceso" rel="noopener"><i class="icon bi bi-circle-fill"></i>Tipos de Procesos</a></li>
-            <li><a class="treeview-item" href="#" target="_blank" rel="noopener"><i class="icon bi bi-circle-fill"></i>Nueva Produccion</a></li>
+            <li><a class="treeview-item" href="?c=produccion"><i class="icon bi bi-circle-fill"></i>Procesos en Produccion</a></li>
           </ul>
         </li>
 
