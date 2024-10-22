@@ -87,9 +87,9 @@ class OrdenCompra {
         }
     }
 
-    // Obtener Orden de Compra
     public function ObtenerOrdenCompra($id) {
         try {
+            // Obtener la orden de compra
             $consulta = $this->pdo->prepare("SELECT * FROM orden_compra WHERE id_orden_compra = ?");
             $consulta->execute(array($id));
             $r = $consulta->fetch(PDO::FETCH_OBJ);
@@ -100,13 +100,19 @@ class OrdenCompra {
             $orden->setCantidad($r->cantidad);
             $orden->setFechaSolicitud($r->fecha_solicitud);
             $orden->setCosto($r->costo);
-
+    
+            // Incrementar la cantidad en la tabla inventariomateriaprima
+            $consultaInventario = $this->pdo->prepare("UPDATE inventariomateriaprima SET cantidad_disponible = cantidad_disponible + ?, fecha_actualizacion = NOW() WHERE id_materia_prima = ?");
+            $consultaInventario->execute(array($r->cantidad, $r->id_materia_prima));
+    
             return $orden;
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
+
+    
     // Listar Ordenes de Compra
     public function ListarOrdenesCompra() {
         try {

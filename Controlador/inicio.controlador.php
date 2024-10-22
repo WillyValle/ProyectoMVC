@@ -16,12 +16,8 @@ class InicioControlador{
     private $modeloCliente; // Añadir la propiedad para clientes
     private $modeloMateriaPrima; // Añadir la propiedad para materia prima
     private $modeloInventarioMP; // Añadir la propiedad para inventario de materia prima
-    
-
-
     private $modeloinventarioproducto; // Propiedad Inventario Producto
     private $modelodetallepedido; // Propiedad Detalle Pedido
-    
 
     public function __CONSTRUCT(){
         $this -> modeloProducto = new Producto();
