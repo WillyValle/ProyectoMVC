@@ -10,8 +10,6 @@
         </ul>
     </div>
 
-    
-
     <div class="row">
         <div class="col-md-6 col-lg-3">
             <div class="card bg-grey">
