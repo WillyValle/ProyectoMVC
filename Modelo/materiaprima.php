@@ -83,7 +83,7 @@ class MateriaPrima{
     public function NivelesMateriaPrima() {
         try {
             $consulta = $this->pdo->prepare("
-                SELECT imp.id_materia_prima, mp.nombre, 0.cantidad_disponible, imp.fecha_actualizacion
+                SELECT imp.id_materia_prima, mp.nombre, cantidad_disponible, imp.fecha_actualizacion
                 FROM inventariomateriaprima imp
                 JOIN materia_prima mp ON imp.id_materia_prima = mp.id_materia_prima;
             ");

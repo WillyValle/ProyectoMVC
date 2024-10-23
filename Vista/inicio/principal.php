@@ -34,7 +34,7 @@
                         </thead>
                         <tbody>
                             <?php 
-                            $productos = $this->modelo->Cantidad();
+                            $productos = $this->modeloProducto->Cantidad();
                             foreach ($productos as $producto) {
                                 echo "<tr>";
                                 echo "<td>{$producto->id_producto}</td>"; 

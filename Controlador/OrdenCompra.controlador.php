@@ -37,20 +37,23 @@ class OrdenCompraControlador {
 
     public function GuardarOrdenCompra() {
         $orden = new OrdenCompra();
-        $orden->setIdOrdenCompra(uniqid());
+        $orden->setIdOrdenCompra($_POST['ID']);
+        $orden->setNoOrdenCompra($_POST['No_OrdenCompra']);
         $orden->setIdMateriaPrima($_POST['id_materia_prima']);
         $orden->setCantidad($_POST['cantidad']);
         $orden->setFechaSolicitud($_POST['fecha_solicitud']);
         $orden->setCosto($_POST['costo']);
 
-        $orden->getIdOrdenCompra() ?
-            $this->modeloOrden->ActualizarOrdenCompra($orden) :
+        if ($orden->getIdOrdenCompra()) {
+            $this->modeloOrden->ActualizarOrdenCompra($orden);
+        } else {
             $this->modeloOrden->InsertarOrdenCompra($orden);
+        }
 
         header("location:?c=ordencompra");
     }
 
-    public function BorrarOrdenCompra() {
+    public function EliminarOrdenCompra() {
         $this->modeloOrden->EliminarOrdenCompra($_GET["id"]);
         header("location:?c=ordencompra");
     }

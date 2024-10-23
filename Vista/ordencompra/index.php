@@ -9,7 +9,7 @@
       <li class="breadcrumb-item">Orden de Compra</li>
       <li class="breadcrumb-item active"><a href="#">Ordenes de Compra Generadas</a></li>
     </ul>
-    <div><a class="btn btn-primary btn-flat" href="?c=inventariomp&a=FormCrearInventarioMP"><i class="bi bi-plus-circle"></i> Nueva Orden de Compra</a></div>
+    <div><a class="btn btn-primary btn-flat" href="?c=ordencompra&a=FormCrearOrdenCompra"><i class="bi bi-plus-circle"></i> Nueva Orden de Compra</a></div>
   </div>
   <div class="row">
     <div class="col-md-12">
@@ -39,7 +39,7 @@
                   <td><?= $orden->costo ?></td>
                   <td>
                     <a class="btn btn-info btn-flat" href="?c=ordencompra&a=FormCrearOrdenCompra&id=<?= $orden->id_orden_compra ?>"><i class="bi bi-pencil-square"></i> Editar</a>
-                    <a class="btn btn-warning btn-flat" href="?c=ordencompra&a=EliminarOrdenCompra&id=<?= $orden->id_orden_compra ?>"><i class="bi bi-trash"></i> Eliminar</a>
+                    <a class="btn btn-warning btn-flat" href="?c=ordencompra&a=EliminarOrdenCompra&id=<?= $orden->id_orden_compra ?>" onclick="return confirm('¿Está seguro de que desea eliminar esta orden de compra?');"><i class="bi bi-trash"></i> Eliminar</a>
                   </td>
                 </tr>
                 <?php endforeach; ?>

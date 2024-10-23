@@ -23,6 +23,7 @@
                     </div>
 
                     <div class="mb-3">
+                      
                     <label class="form-label" for="id_materia_prima">Materia Prima</label>
                     <select required class="form-control" name="id_materia_prima">
                         <option value="">Seleccione una materia prima</option>
